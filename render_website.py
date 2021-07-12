@@ -22,8 +22,11 @@ def on_reload():
 
     with open('index.html', 'w', encoding="utf8") as file:
         file.write(rendered_page)
+    print('Site rebuilt')
 
+
+on_reload()
 
 server = Server()
 server.watch('template.html', on_reload)
-server.serve()
+server.serve(root='.')
