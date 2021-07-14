@@ -10,10 +10,10 @@ def on_reload():
     with open('destfolder/jsonfolder/books.json', 'r',
               encoding='UTF-8') as file:
         books = json.load(file)
-    pages = list(chunked(books, 20))
+    pages = list(chunked(books, 5))
+    pages_amount = len(pages)
     os.makedirs('pages', exist_ok=True)
-    for number, page in enumerate(pages):
-        print(page)
+    for number, page in enumerate(pages, 1):
         env = Environment(
             loader=FileSystemLoader('.'),
             autoescape=select_autoescape(['html', 'xml'])
@@ -23,12 +23,17 @@ def on_reload():
         books_chunked = list(chunked(page, 2))
         rendered_page = template.render(
             books=books_chunked,
+            pages_amount=pages_amount,
+            previous_page=number - 1,
+            current_page=number,
+            next_page=number + 1
+
         )
 
-        with open(f'pages/index{number + 1}.html', 'w',
+        with open(f'pages/index{number}.html', 'w',
                   encoding="utf8") as file:
             file.write(rendered_page)
-        print(f'Page {number + 1} rebuilt')
+        # print(f'Page {number} rebuilt')
 
 
 on_reload()
