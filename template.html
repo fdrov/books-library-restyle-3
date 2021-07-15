@@ -7,7 +7,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../src/bootstrap.min.css">
 
-  <title>Библиотека для дедушки</title>
+  <title>Библиотека фантастики</title>
   <link rel="apple-touch-icon" sizes="180x180" href="../static/icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../static/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../static/icons/favicon-16x16.png">
@@ -68,7 +68,7 @@
                 <h5 class="card-title">{{ book.title }}</h5>
                 <p>{{ book.author }}</p>
                 {% for genre in book.genres %}
-                  <p class="badge badge-light">{{ genre }}</p>
+                  <p class="badge badge-primary">{{ genre }}</p>
                 {% endfor %}
                 <p><a href="{{ '../' ~ book.book_path|urlencode }}" target="_blank"
                    rel="noopener noreferrer" class="href">Читать</a></p>

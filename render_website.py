@@ -7,7 +7,7 @@ from more_itertools import chunked
 
 
 def on_reload():
-    with open('destfolder/jsonfolder/books.json', 'r',
+    with open('static/jsonfolder/books.json', 'r',
               encoding='UTF-8') as file:
         books = json.load(file)
     pages = list(chunked(books, 5))
