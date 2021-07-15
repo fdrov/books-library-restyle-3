@@ -105,7 +105,5 @@ cython_debug/
 *.iml
 out
 gen
-/destfolder/
-/index.html
 /main.py
 /scratch.py
