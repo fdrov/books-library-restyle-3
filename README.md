@@ -6,7 +6,7 @@
 просмотра книг
 ## Пример сгенерированного каталога
 
-![Webapp Screenshot](https://github.com/fdrov/books-library-restyle-3/raw/master/static/demo.png)
+![Webapp Screenshot](https://github.com/fdrov/books-library-restyle-3/raw/master/pages/demo.png)
 
   
 ## Демо
@@ -52,7 +52,7 @@ python parse_tululu_category.py
 * `--end__page` — страница, перед которой остановить парсинг(если пропустить,
 то спарсит все страницы)
 * `--dest_folder` — путь к каталогу с результатами парсинга: картинкам,
-книгам, JSON. (по-умолчанию папка ./static/)
+книгам, JSON. (по-умолчанию папка ./media/)
 * `--skip_imgs` — не скачивать картинки (параметр-флаг)
 * `--skip_txt` — не скачивать книги (параметр-флаг)
 * `--json_path` — указать свой путь к *.json файлу с результатами 
