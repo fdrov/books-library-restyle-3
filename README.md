@@ -116,10 +116,10 @@ ___
 
 ```shell
 ├───pages  # сгенерированные страницы index.html1, index.html2 и тд
-├───src  # css и js файлы библиотеки bootstrap
-├───static
-│   ├───books  # файлы книг
+├───static  # css и js файлы библиотеки bootstrap
 │   ├───icons  # favicons
+├───media
+│   ├───books  # файлы книг
 │   ├───images # обложки книг
 │   └───jsonfolder # папка для файла с мета-информацией о книгах
 ```
