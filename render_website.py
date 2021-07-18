@@ -10,7 +10,7 @@ def on_reload():
     with open('static/jsonfolder/books.json', 'r',
               encoding='UTF-8') as file:
         books = json.load(file)
-    pages = list(chunked(books, 5))
+    pages = list(chunked(books, 10))
     pages_amount = len(pages)
     os.makedirs('pages', exist_ok=True)
     for number, page in enumerate(pages, 1):
